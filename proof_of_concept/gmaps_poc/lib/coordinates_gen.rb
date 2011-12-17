@@ -1,18 +1,18 @@
 #############################################
 #
-#   Generate random coordinates   
+#   Generate random coordinates
 #
 #############################################
 
 
-class CoordinatesGen 
+class CoordinatesGen
   def get(count)
     results = []
     x = MIN_X
     y = MIN_Y
     count.times do |i|
       dx, dy = get_vector()
-      x = [[x+dx, MIN_X].max, MAX_X].min      
+      x = [[x+dx, MIN_X].max, MAX_X].min
       y = [[y+dy, MIN_Y].max, MAX_Y].min
 
       results << {:x => x, :y => y}
@@ -32,11 +32,11 @@ class CoordinatesGen
     C_MAX_STEPS = 100
 
     def random_sign()
-      rand(2) == 1 ? 1 : -1 
+      rand(2) == 1 ? 1 : -1
     end
 
-    def get_vector()      
-      [random_sign * rand(C_MAX_STEPS) * C_STEP, 
-       random_sign * rand(C_MAX_STEPS) * C_STEP] 
+    def get_vector()
+      [random_sign * rand(C_MAX_STEPS) * C_STEP,
+       random_sign * rand(C_MAX_STEPS) * C_STEP]
     end
 end

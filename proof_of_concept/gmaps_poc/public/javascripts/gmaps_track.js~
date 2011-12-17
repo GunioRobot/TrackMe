@@ -13,7 +13,7 @@
     {
         trackCoordinates[i] = new google.maps.LatLng(points[i].x, points[i].y);
     }
-     
+
     var track = new google.maps.Polyline({
       path: trackCoordinates,
       strokeColor: "#FF0000",

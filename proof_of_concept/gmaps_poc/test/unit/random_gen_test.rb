@@ -1,6 +1,6 @@
-#################################################  
+#################################################
 #
-#  Test the random generator of coordinates 
+#  Test the random generator of coordinates
 #
 #################################################
 
@@ -10,7 +10,7 @@ class GeneratorTest < ActiveSupport::TestCase
 
   def setup
     @generator = CoordinatesGen.new
-  end 
+  end
 
   def test_get_random_coordinates
     coordinates = @generator.get(10)
